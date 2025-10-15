@@ -1,4 +1,4 @@
-const prompt=require("prompt-sync")();
+const prompt = require("prompt-sync")();
 //challenge 10:
 const nom = prompt("Enter your name:");
 const mode_pass = Number(prompt("Enter the mode pass:"));
