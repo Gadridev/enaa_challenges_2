@@ -11,4 +11,4 @@ while (i < str.length) {
   }
   i++;
 }
-console.log(count)
+console.log(count);
