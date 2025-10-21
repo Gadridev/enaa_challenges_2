@@ -1,25 +1,6 @@
 // mini-project Todo-list about Taches
 const prompt = require("prompt-sync")();
-const taches = [
-  {
-    id: 1,
-    titre: "Faire les courses",
-    description: "Acheter du lait, du pain et des œufs",
-    isDone: false,
-  },
-  {
-    id: 2,
-    titre: "Nettoyer la maison",
-    description: "Passer l'aspirateur et faire la poussière",
-    isDone: true,
-  },
-  {
-    id: 3,
-    titre: "Préparer le repas",
-    description: "Cuisiner un plat sain pour le dîner",
-    isDone: false,
-  },
-];
+const taches = [];
 //Fonctions de gestion des tâches
 //1:afficher les taches
 function afficherLesTaches() {
