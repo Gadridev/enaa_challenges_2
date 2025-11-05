@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 public class challenges {
@@ -18,14 +19,17 @@ public class challenges {
         }
     }
     public void challenge3(){
-        System.out.print("entrer un nombre 1-10");
         int num=0;
         Random rand=new Random();
         int randomNumber=rand.nextInt(10)+1;
         while (num != randomNumber){
-            System.out.print("entrer un nombre 1-10");
+            System.out.print("entrer un nombre 1-10 ");
               num=scanner.nextInt();
-            if(num<randomNumber){
+            if(num<1 || num>10){
+                System.out.print("please entre nombre between 1-10  \n");
+                continue;
+            }
+            else if(num<randomNumber){
                 System.out.print("Trop petit ! Essayez encore.");
             } else if (num>randomNumber) {
                 System.out.print("Trop grand ! Essayez encore.");
@@ -40,7 +44,7 @@ public class challenges {
         do{
             System.out.print("1. Consulter le solde\n2. Dépôt\n3. Retrait\n4. Quitter");
             System.out.println("entrer un choix");
-             choix=scanner.nextInt();
+            choix=scanner.nextInt();
             switch (choix) {
                 case 1:
                     System.out.println("votre sold " + sold);
@@ -103,6 +107,7 @@ public class challenges {
     }
     public void challenge7(){
         int [] arr={2, 3, 2, 5, 3};
+        //generics
         HashMap<Integer, Integer> filter=new HashMap<>();
 
         for ( int i =0;i<arr.length;i++){
@@ -128,6 +133,17 @@ public class challenges {
             }
         }
 
+    }
+    public  void challenge9(int [] arr1,int [] arr2){
+        HashSet<Integer> arr=new HashSet<>();
+        for (int i =0;i<arr1.length;i++){
+            for (int j =0;j<arr2.length;j++){
+                if(arr1[i]==arr2[j]){
+                    arr.add(arr1[i]);
+                }
+            }
+        }
+        System.out.println(arr);
     }
 }
 
