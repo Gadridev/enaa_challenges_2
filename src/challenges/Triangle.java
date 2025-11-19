@@ -1,0 +1,15 @@
+package challenges;
+
+public class Triangle extends Forme {
+    private double base;
+    private double hauteur;
+
+    public Triangle(double base, double hauteur) {
+        this.base = base;
+        this.hauteur = hauteur;
+    }
+
+    public double calculerAire() {
+        return (base * hauteur) / 2;
+    }
+}
