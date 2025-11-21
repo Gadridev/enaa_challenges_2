@@ -1,12 +1,18 @@
 import challenge3.Animal;
 import challenge3.Chat;
 import challenge3.Chien;
-import challenges.Cercle;
-import challenges.Forme;
-import challenges.Rectangle;
-import challenges.Triangle;
+import challenge5.Paiement;
+import challenge7.Archer;
+import challenge7.Guerrier;
+import challenge7.Mage;
+import challenge7.Personnage;
+import challenge1.Cercle;
+import challenge1.Forme;
+import challenge1.Rectangle;
+import challenge1.Triangle;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main() {
@@ -32,5 +38,15 @@ public class Main {
         for (Animal an:animals){
             an.faireSon();
         }
+        System.out.println("--------------------------------------------------");
+        List<Personnage> personnages=new ArrayList<>();
+        personnages.add(new Guerrier("Aragon"));
+        personnages.add(new Archer("Lia"));
+        personnages.add(new Mage("Aragon"));
+        for (Personnage p:personnages){
+           p.attaquer();
+        }
+
     }
+
 }

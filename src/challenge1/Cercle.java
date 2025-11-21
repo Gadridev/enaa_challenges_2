@@ -1,4 +1,4 @@
-package challenges;
+package challenge1;
 
 public class Cercle extends Forme {
     private int rayon;
